@@ -18,4 +18,30 @@
 
   > tar -xvf Python-3.12.1.tgz
 
+* Execute configure script
+
+  > cd Python-3.12.1
+  > 
+  > ./configure --enable-optimizations  
+
+* Execute make command
+
+  > make -j 4
+  > 
+  > sudo make altinstall
+
+* Verify new python distribution
+
+  > python3.12 --version
   
+* Change default system verion
+
+  > python --version
+  >
+  > ls /usr/bin/python* -latr | grep -v config
+  >
+  > whereis python3.12
+  >
+  > sudo rm /usr/bin/python3
+  >
+  > sudo ln -s /usr/local/bin/python3.12 /usr/bin/python3
